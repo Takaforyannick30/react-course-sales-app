@@ -5,23 +5,16 @@ import Coursesales from './Coursesales'
 
 class App extends Component {
   render() {
+    let courses = [
+      { name: 'Complete Android dev course', price: 140 },
+      { name: 'Complete front end dev course', price: 130 },
+      { name: 'Complete python dev course', price: 120 },
+      { name: 'Complete django dev course', price: 110 },
+    ]
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        <Coursesales />
+       <h1>Course sales page</h1>
+        <Coursesales items={courses} />
       </div>
     );
 
